@@ -1,0 +1,35 @@
+-Explain how to build stateful class components.-
+
+declare the class and then add "extends React.Component" - step 1 
+make the constructor super and the this.state -step 2
+then render the return - step 3
+code - step 4
+class FooComponent extends React.Component {
+  constructor() { 
+    super();
+    this.state = {};
+  }
+  render() {
+    return <div>Hello, I am Foo Component</div>;
+  }
+} 
+(code from the tk)
+-Describe the different phases of the component lifecycle.-
+
+there are 3 phases in the lifecyle render, pre-commit and commit.
+render - there are no side effects in this phase and can be pasused stopted or restarted by react
+pre-commit - reads the DOM
+commit - there are side effects and can make later updates also can work with the DOM
+
+-Demonstrate an understanding of class component lifecycle methods.-
+
+Mounting (this is where you would do your render method and componentDidMount call), updating(this is where you update the data by calling setstate you can also do a force render here too) and unmounting (all the components are done on the screen) in that order
+
+-Define stateful logic.-
+anything that uses state is stateful logic
+
+-Describe how to test a React component with React Testing Library.-
+you need to make a test on that part of the code. You can check lets say the text in a lable by getbylable(/name/i) and run it.
+
+
+
